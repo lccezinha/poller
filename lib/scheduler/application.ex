@@ -8,7 +8,8 @@ defmodule Scheduler.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {Scheduler.Repo, []}
+      {Scheduler.Repo, []},
+      {Scheduler.Poller, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
